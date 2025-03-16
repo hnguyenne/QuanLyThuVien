@@ -1,0 +1,41 @@
+# Ignore Visual Studio-specific files
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Ignore build output
+bin/
+obj/
+out/
+
+# Ignore NuGet packages
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+
+# Ignore logs, database files, and temporary files
+*.log
+*.tlog
+*.pdb
+*.cache
+*.db
+
+# Ignore Rider and ReSharper files (if using JetBrains Rider)
+.idea/
+*.sln.DotSettings.user
+*.ReSharper
+
+# Ignore publish output
+publish/
+app.publish/
+
+# Ignore user secrets
+secrets.json
+
+# Ignore Mac and Linux system files
+.DS_Store
+
+dbconfig.txt

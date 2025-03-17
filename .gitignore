@@ -38,5 +38,7 @@ secrets.json
 # Ignore Mac and Linux system files
 .DS_Store
 
-clsDatabase.cs
-.vs/slnx.sqlite
+dbconfig.txt
+QuanLyThuVien/clsDatabase.cs
+.vs/QuanLyThuVien/v17/.suo
+

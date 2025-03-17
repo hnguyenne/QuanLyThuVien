@@ -8,30 +8,15 @@ using System.IO;
 
 namespace QuanLyThuVien
 {
-    public class clsDatabase
+    class clsDatabase
     {
-        private string connectionString;
-
-        public clsDatabase()
-        {
-            // Read connection string from dbconfig.txt
-            if (File.Exists("dbconfig.txt"))
-            {
-                connectionString = File.ReadAllText("dbconfig.txt").Trim();
-            }
-            else
-            {
-                throw new Exception("Database configuration file not found!");
-            }
-        }
-
         public static SqlConnection con;
 
-        public bool OpenConnection()
+        public static bool OpenConnection()
         {
             try
             {
-                con = new SqlConnection(connectionString);
+                con = new SqlConnection("Server=MSI\\Cam Vien; Database=qltv;Integrated Security=True;");
                 con.Open();
             }
             catch (Exception)
@@ -53,5 +38,7 @@ namespace QuanLyThuVien
             }
             return true;
         }
+
     }
 }
+

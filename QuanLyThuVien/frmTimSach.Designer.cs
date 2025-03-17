@@ -35,6 +35,7 @@
             this.btnTimSachMa = new System.Windows.Forms.Button();
             this.btnTimSachNamXB = new System.Windows.Forms.Button();
             this.btnTimSachTxt = new System.Windows.Forms.Button();
+            this.btnXoaSach = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_sach)).BeginInit();
             this.SuspendLayout();
             // 
@@ -105,11 +106,22 @@
             this.btnTimSachTxt.UseVisualStyleBackColor = true;
             this.btnTimSachTxt.Click += new System.EventHandler(this.btnTimSachTxt_Click);
             // 
+            // btnXoaSach
+            // 
+            this.btnXoaSach.Location = new System.Drawing.Point(350, 454);
+            this.btnXoaSach.Name = "btnXoaSach";
+            this.btnXoaSach.Size = new System.Drawing.Size(136, 23);
+            this.btnXoaSach.TabIndex = 7;
+            this.btnXoaSach.Text = "Xóa";
+            this.btnXoaSach.UseVisualStyleBackColor = true;
+            this.btnXoaSach.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmTimSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 525);
+            this.Controls.Add(this.btnXoaSach);
             this.Controls.Add(this.btnTimSachTxt);
             this.Controls.Add(this.btnTimSachNamXB);
             this.Controls.Add(this.btnTimSachMa);
@@ -134,5 +146,6 @@
         private System.Windows.Forms.Button btnTimSachMa;
         private System.Windows.Forms.Button btnTimSachNamXB;
         private System.Windows.Forms.Button btnTimSachTxt;
+        private System.Windows.Forms.Button btnXoaSach;
     }
 }

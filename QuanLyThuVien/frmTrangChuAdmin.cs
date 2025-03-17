@@ -24,5 +24,10 @@ namespace QuanLyThuVien
             timSach.Show();
             this.Hide();
         }
+
+        private void btnThemSach_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

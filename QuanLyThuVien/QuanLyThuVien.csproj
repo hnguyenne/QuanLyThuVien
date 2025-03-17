@@ -52,20 +52,35 @@
     </Compile>
     <Compile Include="DangNhap.Designer.cs">
       <DependentUpon>DangNhap.cs</DependentUpon>
+<<<<<<< HEAD
     </Compile>
     <Compile Include="frmTrangChuAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmTrangChuAdmin.Designer.cs">
       <DependentUpon>frmTrangChuAdmin.cs</DependentUpon>
+=======
+>>>>>>> dien
     </Compile>
+    <Compile Include="frmTrangChuNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTrangChuNV.Designer.cs">
+      <DependentUpon>frmTrangChuNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="frmTrangChuAdmin.resx">
       <DependentUpon>frmTrangChuAdmin.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="frmTrangChuNV.resx">
+      <DependentUpon>frmTrangChuNV.cs</DependentUpon>
+>>>>>>> dien
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -76,6 +91,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\QuanLyThuVien.csproj.AssemblyReference.cache" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -91,7 +109,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Database.sql" />
+<<<<<<< HEAD
     <Content Include="dbconfig.txt" />
+=======
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+    <Folder Include="bin\Release\" />
+    <Folder Include="obj\Debug\TempPE\" />
+>>>>>>> dien
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

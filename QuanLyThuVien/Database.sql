@@ -3,7 +3,7 @@
 use qltv;
 
 create table sach(
-	ma_sach int primary key,
+	ma_sach int identity(1,1) primary key,
 	ten_sach nvarchar(50) not null,
 	tac_gia nvarchar(50) not null,
 	nxb nvarchar(50) not null,
@@ -55,3 +55,5 @@ insert into doc_gia values (3, N'Lê Thị B', '2005-12-23', '0582958271', N'Nin
 insert into sach values(1, N'Sách 1', N'Tác giả 1', 'NXB ABC', 2024, N'Sách giáo khoa', 10, 9);
 
 insert into nhan_vien values(1, N'Nhân viên 1', '0987987987', 'nv1@gmail.com', '12345678');
+
+select * from sach;

@@ -32,7 +32,9 @@ namespace QuanLyThuVien
 
         private void btnThemSach_Click(object sender, EventArgs e)
         {
-
+            frmThemSach frmThemSach = new frmThemSach();
+            frmThemSach.Show();
+            this.Hide();
         }
     }
 }

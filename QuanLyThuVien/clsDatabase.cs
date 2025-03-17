@@ -5,10 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Windows.Forms;
 
 namespace QuanLyThuVien
 {
-    class clsDatabase
+    public class clsDatabase
     {
         public static SqlConnection con;
 
@@ -16,7 +17,7 @@ namespace QuanLyThuVien
         {
             try
             {
-                con = new SqlConnection("Server=MSI\\Cam Vien; Database=qltv;Integrated Security=True;");
+                con = new SqlConnection("Server=LAPTOP-ELUMS6N1\\SQLEXPRESS; Database=qltv; uid=mylogin; pwd=mylogin");
                 con.Open();
             }
             catch (Exception)
@@ -38,7 +39,5 @@ namespace QuanLyThuVien
             }
             return true;
         }
-
     }
 }
-

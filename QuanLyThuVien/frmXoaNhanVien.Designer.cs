@@ -32,17 +32,20 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
+            this.txtTim = new System.Windows.Forms.TextBox();
+            this.cboTim = new System.Windows.Forms.ComboBox();
+            this.btnTim = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvNhanVien)).BeginInit();
             this.SuspendLayout();
             // 
             // dtgvNhanVien
             // 
             this.dtgvNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvNhanVien.Location = new System.Drawing.Point(93, 75);
+            this.dtgvNhanVien.Location = new System.Drawing.Point(93, 147);
             this.dtgvNhanVien.Name = "dtgvNhanVien";
             this.dtgvNhanVien.RowHeadersWidth = 51;
             this.dtgvNhanVien.RowTemplate.Height = 24;
-            this.dtgvNhanVien.Size = new System.Drawing.Size(616, 315);
+            this.dtgvNhanVien.Size = new System.Drawing.Size(616, 243);
             this.dtgvNhanVien.TabIndex = 0;
             // 
             // label1
@@ -69,17 +72,49 @@
             // 
             this.btnXoa.Location = new System.Drawing.Point(177, 408);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(100, 30);
+            this.btnXoa.Size = new System.Drawing.Size(143, 30);
             this.btnXoa.TabIndex = 3;
             this.btnXoa.Text = "Xóa nhân viên";
             this.btnXoa.UseVisualStyleBackColor = true;
             this.btnXoa.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // txtTim
+            // 
+            this.txtTim.Location = new System.Drawing.Point(93, 96);
+            this.txtTim.Name = "txtTim";
+            this.txtTim.Size = new System.Drawing.Size(267, 22);
+            this.txtTim.TabIndex = 4;
+            // 
+            // cboTim
+            // 
+            this.cboTim.FormattingEnabled = true;
+            this.cboTim.Items.AddRange(new object[] {
+            "Mã nhân viên",
+            "Tên nhân viên"});
+            this.cboTim.Location = new System.Drawing.Point(403, 94);
+            this.cboTim.Name = "cboTim";
+            this.cboTim.Size = new System.Drawing.Size(121, 24);
+            this.cboTim.TabIndex = 5;
+            this.cboTim.Text = "Tìm kiếm bằng";
+            // 
+            // btnTim
+            // 
+            this.btnTim.Location = new System.Drawing.Point(582, 94);
+            this.btnTim.Name = "btnTim";
+            this.btnTim.Size = new System.Drawing.Size(89, 24);
+            this.btnTim.TabIndex = 6;
+            this.btnTim.Text = "Tìm";
+            this.btnTim.UseVisualStyleBackColor = true;
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
             // frmXoaNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnTim);
+            this.Controls.Add(this.cboTim);
+            this.Controls.Add(this.txtTim);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
@@ -99,5 +134,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.TextBox txtTim;
+        private System.Windows.Forms.ComboBox cboTim;
+        private System.Windows.Forms.Button btnTim;
     }
 }

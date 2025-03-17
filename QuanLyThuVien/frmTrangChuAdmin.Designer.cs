@@ -37,7 +37,6 @@
             this.btnThemSach = new System.Windows.Forms.Button();
             this.btnCapNhatNV = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnTimKiemNV = new System.Windows.Forms.Button();
             this.btnXoaNV = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnTimKiemSach = new System.Windows.Forms.Button();
@@ -125,7 +124,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnTimKiemNV);
             this.groupBox1.Controls.Add(this.btnXoaNV);
             this.groupBox1.Controls.Add(this.btnCapNhatNV);
             this.groupBox1.Controls.Add(this.btnThemNV);
@@ -139,16 +137,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Quản Lý Nhân Viên";
             // 
-            // btnTimKiemNV
-            // 
-            this.btnTimKiemNV.Location = new System.Drawing.Point(17, 172);
-            this.btnTimKiemNV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnTimKiemNV.Name = "btnTimKiemNV";
-            this.btnTimKiemNV.Size = new System.Drawing.Size(207, 35);
-            this.btnTimKiemNV.TabIndex = 9;
-            this.btnTimKiemNV.Text = "Tìm kiếm";
-            this.btnTimKiemNV.UseVisualStyleBackColor = true;
-            // 
             // btnXoaNV
             // 
             this.btnXoaNV.Location = new System.Drawing.Point(17, 123);
@@ -156,7 +144,7 @@
             this.btnXoaNV.Name = "btnXoaNV";
             this.btnXoaNV.Size = new System.Drawing.Size(207, 35);
             this.btnXoaNV.TabIndex = 8;
-            this.btnXoaNV.Text = "Xóa";
+            this.btnXoaNV.Text = "Tìm kiếm và xóa";
             this.btnXoaNV.UseVisualStyleBackColor = true;
             this.btnXoaNV.Click += new System.EventHandler(this.btnXoaNV_Click);
             // 
@@ -230,7 +218,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnXoaNV;
-        private System.Windows.Forms.Button btnTimKiemNV;
         private System.Windows.Forms.Button btnTimKiemSach;
         private System.Windows.Forms.Button btnCapNhatSach;
     }

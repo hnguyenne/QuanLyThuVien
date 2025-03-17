@@ -83,5 +83,38 @@ namespace QuanLyThuVien
                 MessageBox.Show("Có lỗi xảy ra " + ex.Message);
             }
         }
+
+        private void btnTim_Click(object sender, EventArgs e)
+        {
+            string key = txtTim.Text;
+            clsDatabase.OpenConnection();
+            SqlCommand sql = new SqlCommand();
+            if (key != "" && cboTim.SelectedIndex == 0)
+            {
+                sql = new SqlCommand("Select ma_nhan_vien, ho_ten, so_dien_thoai, email from nhan_vien where ma_nhan_vien = @QLTVMaNV", clsDatabase.con);
+                SqlParameter p1 = new SqlParameter("@QLTVMaNV", SqlDbType.Int);
+                p1.Value = Convert.ToInt32(key);
+                sql.Parameters.Add(p1);
+                
+            }
+            else if (key != "" && cboTim.SelectedIndex == 1)
+            {
+                sql = new SqlCommand("Select ma_nhan_vien, ho_ten, so_dien_thoai, email from nhan_vien where ho_ten Like '%' + @QLTVMaNV + '%'", clsDatabase.con);
+                SqlParameter p2 = new SqlParameter("@QLTVMaNV", SqlDbType.NVarChar);
+                p2.Value = key;
+                sql.Parameters.Add(p2);
+            }
+            else { sql = new SqlCommand("Select ma_nhan_vien, ho_ten, so_dien_thoai, email from nhan_vien", clsDatabase.con); }
+            SqlDataAdapter adapter = new SqlDataAdapter(sql);
+            DataTable dataTable = new DataTable();
+            adapter.Fill(dataTable);
+            dtgvNhanVien.DataSource = dataTable;
+            dtgvNhanVien.Columns["ma_nhan_vien"].HeaderText = "Mã nhân viên";
+            dtgvNhanVien.Columns["ho_ten"].HeaderText = "Họ và tên";
+            dtgvNhanVien.Columns["so_dien_thoai"].HeaderText = "Số điện thoại";
+            dtgvNhanVien.Columns["email"].HeaderText = "Email";
+            dtgvNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            clsDatabase.CloseConnection();
+        }
     }
 }

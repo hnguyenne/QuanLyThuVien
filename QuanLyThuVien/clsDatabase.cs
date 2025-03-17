@@ -17,11 +17,12 @@ namespace QuanLyThuVien
         {
             try
             {
-                con = new SqlConnection("Server=LAPTOP-ELUMS6N1\\SQLEXPRESS; Database=qltv; uid=mylogin; pwd=mylogin");
+                con = new SqlConnection("Server=DESKTOP-8ASHGED\\MSSQLSERVER02; Database=QLTV;uid=mylogin;pwd=mylogin");
                 con.Open();
             }
             catch (Exception)
             {
+                MessageBox.Show("Connection error");
                 return false;
             }
             return true;

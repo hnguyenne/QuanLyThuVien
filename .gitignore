@@ -39,3 +39,5 @@ secrets.json
 .DS_Store
 
 dbconfig.txt
+QuanLyThuVien/clsDatabase.cs
+.vs/QuanLyThuVien/v17/.suo

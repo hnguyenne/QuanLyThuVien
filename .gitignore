@@ -38,4 +38,5 @@ secrets.json
 # Ignore Mac and Linux system files
 .DS_Store
 
-dbconfig.txt
+clsDatabase.cs
+.vs/slnx.sqlite

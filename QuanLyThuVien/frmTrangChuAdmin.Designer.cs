@@ -158,6 +158,7 @@
             this.btnXoaNV.TabIndex = 8;
             this.btnXoaNV.Text = "Xóa";
             this.btnXoaNV.UseVisualStyleBackColor = true;
+            this.btnXoaNV.Click += new System.EventHandler(this.btnXoaNV_Click);
             // 
             // groupBox2
             // 

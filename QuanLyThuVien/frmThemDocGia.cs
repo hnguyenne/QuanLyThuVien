@@ -49,7 +49,7 @@ namespace QuanLyThuVien
             {
                 clsDatabase.OpenConnection();
                 SqlCommand sql = new SqlCommand("INSERT INTO doc_gia (ho_ten, ngay_sinh, so_dien_thoai, diachi, email) " +
-                                                    "VALUES (@QLTVHoTen, @QLTVNgaySinh, @QLTVSoDienThoai, @QLTVDiaChi, @QLTVEmail)");
+                                                    "VALUES (@QLTVHoTen, @QLTVNgaySinh, @QLTVSoDienThoai, @QLTVDiaChi, @QLTVEmail)", clsDatabase.con);
                 SqlParameter p1 = new SqlParameter("@QLTVHoTen", SqlDbType.NVarChar);
                 p1.Value = txtHoTen.Text;
                 SqlParameter p2 = new SqlParameter("@QLTVNgaySinh", SqlDbType.Date);

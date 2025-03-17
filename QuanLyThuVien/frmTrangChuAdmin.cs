@@ -22,6 +22,11 @@ namespace QuanLyThuVien
         {
             frmTimSach timSach = new frmTimSach();
             timSach.Show();
+        }
+        private void btnXoaNV_Click(object sender, EventArgs e)
+        {
+            frmXoaNhanVien frmXoaNhanVien = new frmXoaNhanVien();
+            frmXoaNhanVien.Show();
             this.Hide();
         }
     }

@@ -77,6 +77,12 @@ namespace QuanLyThuVien
 
                 dtgv_sach.DataSource = dataTable;
 
+                dtgv_sach.Columns["ma_sach"].HeaderText = "Mã sách";
+                dtgv_sach.Columns["ten_sach"].HeaderText = "Tên sách";
+                dtgv_sach.Columns["tac_gia"].HeaderText = "Tác giả";
+                dtgv_sach.Columns["nxb"].HeaderText = "NXB";
+                dtgv_sach.Columns["nam"].HeaderText = "Năm xuất bản";
+
                 clsDatabase.CloseConnection();
             }
             catch (Exception ex)
@@ -113,6 +119,31 @@ namespace QuanLyThuVien
             {
                 MessageBox.Show("Có lỗi xảy ra khi tìm sách ", ex.Message);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                foreach (DataGridViewRow row in dtgv_sach.SelectedRows)
+                {
+                    int masach = int.Parse(row.Cells["ma_sach"].Value.ToString());
+
+                    clsDatabase.OpenConnection();
+                    SqlCommand cmd = new SqlCommand("delete from sach where ma_sach = @QLTVMasach", clsDatabase.con);
+
+                    SqlParameter p1 = new SqlParameter("@QLTVMasach", SqlDbType.Int);
+                    p1.Value = masach;
+                    cmd.Parameters.Add(p1);
+
+                    cmd.ExecuteNonQuery();
+                    clsDatabase.CloseConnection();
+                    dtgv_sach.Rows.RemoveAt(row.Index);
+                }
+            } catch (Exception ex)
+            {
+                MessageBox.Show("Có lỗi khi xóa sách", ex.Message);
+            } 
         }
     }
 }

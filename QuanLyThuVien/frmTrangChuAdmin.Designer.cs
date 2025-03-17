@@ -41,7 +41,6 @@
             this.btnXoaNV = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnTimKiemSach = new System.Windows.Forms.Button();
-            this.btnXoaSach = new System.Windows.Forms.Button();
             this.btnCapNhatSach = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -112,6 +111,7 @@
             this.btnThemSach.TabIndex = 6;
             this.btnThemSach.Text = "Thêm";
             this.btnThemSach.UseVisualStyleBackColor = true;
+            this.btnThemSach.Click += new System.EventHandler(this.btnThemSach_Click);
             // 
             // btnCapNhatNV
             // 
@@ -164,7 +164,6 @@
             // 
             this.groupBox2.Controls.Add(this.btnTimKiemSach);
             this.groupBox2.Controls.Add(this.btnThemSach);
-            this.groupBox2.Controls.Add(this.btnXoaSach);
             this.groupBox2.Controls.Add(this.btnCapNhatSach);
             this.groupBox2.Location = new System.Drawing.Point(376, 128);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -177,7 +176,7 @@
             // 
             // btnTimKiemSach
             // 
-            this.btnTimKiemSach.Location = new System.Drawing.Point(20, 172);
+            this.btnTimKiemSach.Location = new System.Drawing.Point(20, 123);
             this.btnTimKiemSach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTimKiemSach.Name = "btnTimKiemSach";
             this.btnTimKiemSach.Size = new System.Drawing.Size(207, 35);
@@ -185,16 +184,6 @@
             this.btnTimKiemSach.Text = "Tìm kiếm";
             this.btnTimKiemSach.UseVisualStyleBackColor = true;
             this.btnTimKiemSach.Click += new System.EventHandler(this.btnTimKiemSach_Click);
-            // 
-            // btnXoaSach
-            // 
-            this.btnXoaSach.Location = new System.Drawing.Point(20, 123);
-            this.btnXoaSach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnXoaSach.Name = "btnXoaSach";
-            this.btnXoaSach.Size = new System.Drawing.Size(207, 35);
-            this.btnXoaSach.TabIndex = 11;
-            this.btnXoaSach.Text = "Xóa";
-            this.btnXoaSach.UseVisualStyleBackColor = true;
             // 
             // btnCapNhatSach
             // 
@@ -243,7 +232,6 @@
         private System.Windows.Forms.Button btnXoaNV;
         private System.Windows.Forms.Button btnTimKiemNV;
         private System.Windows.Forms.Button btnTimKiemSach;
-        private System.Windows.Forms.Button btnXoaSach;
         private System.Windows.Forms.Button btnCapNhatSach;
     }
 }

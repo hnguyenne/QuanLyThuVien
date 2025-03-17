@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,13 @@ namespace QuanLyThuVien
         public frmTrangChuAdmin()
         {
             InitializeComponent();
+        }
+
+        private void btnTimKiemSach_Click(object sender, EventArgs e)
+        {
+            frmTimSach timSach = new frmTimSach();
+            timSach.Show();
+            this.Hide();
         }
     }
 }

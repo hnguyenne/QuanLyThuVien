@@ -14,7 +14,7 @@ create table sach(
 );
 
 Create table doc_gia(
-	ma_doc_gia int primary key,
+	ma_doc_gia int identity(1,1) primary key,
 	ho_ten nvarchar(50) not null,
 	ngay_sinh date not null,
 	so_dien_thoai char(10) check(so_dien_thoai LIKE '[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'), 
@@ -24,7 +24,7 @@ Create table doc_gia(
 
 
 Create table nhan_vien(
-	ma_nhan_vien int primary key,
+	ma_nhan_vien int identity(1,1) primary key,
 	ho_ten nvarchar(50) not null,
 	so_dien_thoai char(10) check(so_dien_thoai LIKE '[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'), 
 	email varchar(50) not null,
@@ -32,7 +32,7 @@ Create table nhan_vien(
 	);
 
 Create table muon(
-	ma_muon int primary key,
+	ma_muon int identity(1,1) primary key,
 	ma_doc_gia int references doc_gia(ma_doc_gia) on update cascade on delete cascade,
 	ma_sach int references sach(ma_sach) on update cascade on delete cascade,
 	ngay_muon date not null default sysdatetime(),
@@ -42,7 +42,7 @@ Create table muon(
 );
 
 Create table phat(
-	ma_phat_tien int primary key,
+	ma_phat_tien int identity(1,1) primary key,
 	ma_muon int references muon(ma_muon) on update cascade on delete cascade,
 	so_tien int not null,
 	da_tra int default 0,

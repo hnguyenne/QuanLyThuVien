@@ -100,7 +100,9 @@ namespace QuanLyThuVien
 
         private void btnQLMuonTra_Click(object sender, EventArgs e)
         {
-
+            frmQLyMuonTra muontra = new frmQLyMuonTra(manv);
+            muontra.Show();
+            this.Hide();
         }
     }
 }

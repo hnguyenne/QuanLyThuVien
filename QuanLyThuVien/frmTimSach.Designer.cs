@@ -36,6 +36,8 @@
             this.btnTimSachNamXB = new System.Windows.Forms.Button();
             this.btnTimSachTxt = new System.Windows.Forms.Button();
             this.btnXoaSach = new System.Windows.Forms.Button();
+            this.btnCapNhat = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_sach)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,9 +64,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(350, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 32);
+            this.label1.Size = new System.Drawing.Size(191, 32);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Tìm sách";
+            this.label1.Text = "Quản lý sách";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
@@ -80,7 +82,7 @@
             // 
             this.btnTimSachMa.Location = new System.Drawing.Point(42, 118);
             this.btnTimSachMa.Name = "btnTimSachMa";
-            this.btnTimSachMa.Size = new System.Drawing.Size(177, 23);
+            this.btnTimSachMa.Size = new System.Drawing.Size(177, 33);
             this.btnTimSachMa.TabIndex = 4;
             this.btnTimSachMa.Text = "Tìm kiếm theo mã sách";
             this.btnTimSachMa.UseVisualStyleBackColor = true;
@@ -90,7 +92,7 @@
             // 
             this.btnTimSachNamXB.Location = new System.Drawing.Point(241, 118);
             this.btnTimSachNamXB.Name = "btnTimSachNamXB";
-            this.btnTimSachNamXB.Size = new System.Drawing.Size(177, 23);
+            this.btnTimSachNamXB.Size = new System.Drawing.Size(177, 33);
             this.btnTimSachNamXB.TabIndex = 5;
             this.btnTimSachNamXB.Text = "Tìm kiếm theo năm xb";
             this.btnTimSachNamXB.UseVisualStyleBackColor = true;
@@ -100,7 +102,7 @@
             // 
             this.btnTimSachTxt.Location = new System.Drawing.Point(447, 118);
             this.btnTimSachTxt.Name = "btnTimSachTxt";
-            this.btnTimSachTxt.Size = new System.Drawing.Size(308, 23);
+            this.btnTimSachTxt.Size = new System.Drawing.Size(308, 33);
             this.btnTimSachTxt.TabIndex = 6;
             this.btnTimSachTxt.Text = "Tìm kiếm theo tên, tác giả, thể loại hoặc nhà xb";
             this.btnTimSachTxt.UseVisualStyleBackColor = true;
@@ -108,19 +110,41 @@
             // 
             // btnXoaSach
             // 
-            this.btnXoaSach.Location = new System.Drawing.Point(350, 454);
+            this.btnXoaSach.Location = new System.Drawing.Point(316, 468);
             this.btnXoaSach.Name = "btnXoaSach";
-            this.btnXoaSach.Size = new System.Drawing.Size(136, 23);
+            this.btnXoaSach.Size = new System.Drawing.Size(136, 45);
             this.btnXoaSach.TabIndex = 7;
             this.btnXoaSach.Text = "Xóa";
             this.btnXoaSach.UseVisualStyleBackColor = true;
             this.btnXoaSach.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnCapNhat
+            // 
+            this.btnCapNhat.Location = new System.Drawing.Point(531, 468);
+            this.btnCapNhat.Name = "btnCapNhat";
+            this.btnCapNhat.Size = new System.Drawing.Size(136, 45);
+            this.btnCapNhat.TabIndex = 8;
+            this.btnCapNhat.Text = "Cập nhật";
+            this.btnCapNhat.UseVisualStyleBackColor = true;
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
+            // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(109, 468);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(136, 45);
+            this.btnBack.TabIndex = 9;
+            this.btnBack.Text = "Quay lại";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // frmTimSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 525);
+            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.btnXoaSach);
             this.Controls.Add(this.btnTimSachTxt);
             this.Controls.Add(this.btnTimSachNamXB);
@@ -147,5 +171,7 @@
         private System.Windows.Forms.Button btnTimSachNamXB;
         private System.Windows.Forms.Button btnTimSachTxt;
         private System.Windows.Forms.Button btnXoaSach;
+        private System.Windows.Forms.Button btnCapNhat;
+        private System.Windows.Forms.Button btnBack;
     }
 }

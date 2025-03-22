@@ -88,9 +88,9 @@ namespace QuanLyThuVien
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            frmTimSach timSach = new frmTimSach();
-            timSach.Show(); // Mở form Tìm Sách
-            this.Hide();    // Ẩn form hiện tại
+            frmTimSach timSach = new frmTimSach(this);
+            this.Hide();
+            timSach.Show();
         }
 
         private void btnQLSach_Click(object sender, EventArgs e)

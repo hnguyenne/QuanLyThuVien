@@ -20,7 +20,8 @@ namespace QuanLyThuVien
 
         private void btnTimKiemSach_Click(object sender, EventArgs e)
         {
-            frmTimSach timSach = new frmTimSach();
+            frmTimSach timSach = new frmTimSach(this);
+            this.Hide();
             timSach.Show();
         }
         private void btnXoaNV_Click(object sender, EventArgs e)
@@ -42,6 +43,21 @@ namespace QuanLyThuVien
             frmThemNhanVien frmThemNhanVien = new frmThemNhanVien();
             frmThemNhanVien.Show();
             this.Hide();
+        }
+
+        private void lblTrangChu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCapNhatNV_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCapNhatSach_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

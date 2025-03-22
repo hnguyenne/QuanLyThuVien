@@ -30,7 +30,6 @@
         {
             this.lblTrangChu = new System.Windows.Forms.Label();
             this.btnTimKiem = new System.Windows.Forms.Button();
-            this.btnQLSach = new System.Windows.Forms.Button();
             this.btnQLMuonTra = new System.Windows.Forms.Button();
             this.lblMNV = new System.Windows.Forms.Label();
             this.lblHoTenNV = new System.Windows.Forms.Label();
@@ -51,23 +50,13 @@
             // 
             // btnTimKiem
             // 
-            this.btnTimKiem.Location = new System.Drawing.Point(258, 32);
+            this.btnTimKiem.Location = new System.Drawing.Point(355, 32);
             this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(96, 44);
+            this.btnTimKiem.Size = new System.Drawing.Size(151, 44);
             this.btnTimKiem.TabIndex = 7;
-            this.btnTimKiem.Text = "Tìm Kiếm";
+            this.btnTimKiem.Text = "Quản lý sách";
             this.btnTimKiem.UseVisualStyleBackColor = true;
             this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
-            // 
-            // btnQLSach
-            // 
-            this.btnQLSach.Location = new System.Drawing.Point(405, 31);
-            this.btnQLSach.Name = "btnQLSach";
-            this.btnQLSach.Size = new System.Drawing.Size(127, 44);
-            this.btnQLSach.TabIndex = 8;
-            this.btnQLSach.Text = "Quản Lý Sách";
-            this.btnQLSach.UseVisualStyleBackColor = true;
-            this.btnQLSach.Click += new System.EventHandler(this.btnQLSach_Click);
             // 
             // btnQLMuonTra
             // 
@@ -135,7 +124,6 @@
             this.Controls.Add(this.lblHoTenNV);
             this.Controls.Add(this.lblMNV);
             this.Controls.Add(this.btnQLMuonTra);
-            this.Controls.Add(this.btnQLSach);
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.lblTrangChu);
             this.Name = "frmTrangChuNV";
@@ -150,7 +138,6 @@
 
         private System.Windows.Forms.Label lblTrangChu;
         private System.Windows.Forms.Button btnTimKiem;
-        private System.Windows.Forms.Button btnQLSach;
         private System.Windows.Forms.Button btnQLMuonTra;
         private System.Windows.Forms.Label lblMNV;
         private System.Windows.Forms.Label lblHoTenNV;

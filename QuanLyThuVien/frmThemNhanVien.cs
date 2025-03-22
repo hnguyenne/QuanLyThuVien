@@ -53,7 +53,8 @@ namespace QuanLyThuVien
             {
                 clsDatabase.OpenConnection();
                 SqlCommand com = new SqlCommand("Insert into nhan_vien(ho_ten, so_dien_thoai,email, mat_khau) values" +
-                    "(@QLTVHoTen, @QLTVSDT, @QLTVEmail, @QLTVMK)", clsDatabase.con);
+                    "(@QLTVHoTen, @QLTVSDT, @QLTVEmail, @QLTVMK); " +
+                    "SELECT SCOPE_IDENTITY();", clsDatabase.con);
 
                 SqlParameter p1 = new SqlParameter("@QLTVHoTen", SqlDbType.NVarChar);
                 p1.Value = txtHoTen.Text;
@@ -68,24 +69,25 @@ namespace QuanLyThuVien
                 com.Parameters.Add(p2);
                 com.Parameters.Add(p3);
                 com.Parameters.Add(p4);
-                int rowsAffected = com.ExecuteNonQuery();
 
-                if (rowsAffected > 0)
+                object result = com.ExecuteScalar();
+
+                clsDatabase.CloseConnection();
+
+                if (result != null)
                 {
-                    MessageBox.Show("Thêm nhân viên thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    clsDatabase.CloseConnection();
+                    int maNV = Convert.ToInt32(result);
+                    MessageBox.Show("Thêm nhân viên thành công!\nMã NV: " + maNV, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
                     MessageBox.Show("Thêm nhân viên thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    clsDatabase.CloseConnection();
                 }
             } catch (Exception ex) 
             {
                 MessageBox.Show("Có lỗi xảy ra" + ex.Message);
                 clsDatabase.CloseConnection();
             }
-            
 
         }
 

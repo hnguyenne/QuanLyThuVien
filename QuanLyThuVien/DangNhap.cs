@@ -35,7 +35,7 @@ namespace QuanLyThuVien
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txtEmail.Text == "admin" && txtMatKhau.Text == "admin")
+            if (txtMaNV.Text == "admin" && txtMatKhau.Text == "admin")
             {
                 frmTrangChuAdmin admin = new frmTrangChuAdmin();
                 admin.Show();
@@ -46,10 +46,10 @@ namespace QuanLyThuVien
                 try
                 {
                     clsDatabase.OpenConnection();
-                    SqlCommand com = new SqlCommand("select count(*) from nhan_vien where email = @QLTVemail and mat_khau = @QLTVmat_khau", clsDatabase.con);
+                    SqlCommand com = new SqlCommand("select count(*) from nhan_vien where ma_nhan_vien = @QLTVmanv and mat_khau = @QLTVmat_khau", clsDatabase.con);
 
-                    SqlParameter p1 = new SqlParameter("@QLTVemail", SqlDbType.VarChar);
-                    p1.Value = txtEmail.Text;
+                    SqlParameter p1 = new SqlParameter("@QLTVmanv", SqlDbType.Int);
+                    p1.Value = int.Parse(txtMaNV.Text);
                     SqlParameter p2 = new SqlParameter("@QLTVmat_khau", SqlDbType.VarChar);
                     p2.Value = txtMatKhau.Text;
 
@@ -59,8 +59,9 @@ namespace QuanLyThuVien
                     int count = (int)com.ExecuteScalar();
                     if (count > 0)
                     {
-                        frmTrangChuAdmin admin = new frmTrangChuAdmin();
-                        admin.Show();
+                        int manv = int.Parse(txtMaNV.Text);
+                        frmTrangChuNV nv = new frmTrangChuNV(manv);
+                        nv.Show();
                         this.Hide();
                     }
                     else MessageBox.Show("Email hoặc mật khẩu không đúng");
@@ -76,8 +77,13 @@ namespace QuanLyThuVien
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            txtEmail.Clear();
+            txtMaNV.Clear();
             txtMatKhau.Clear();
+        }
+
+        private void DangNhap_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

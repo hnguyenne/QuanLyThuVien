@@ -31,7 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtMaNV = new System.Windows.Forms.TextBox();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -53,9 +53,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(40, 110);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 16);
+            this.label2.Size = new System.Drawing.Size(86, 16);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Email";
+            this.label2.Text = "Mã nhân viên";
             // 
             // label3
             // 
@@ -67,12 +67,12 @@
             this.label3.Text = "Mật khẩu";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // txtEmail
+            // txtMaNV
             // 
-            this.txtEmail.Location = new System.Drawing.Point(163, 107);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(301, 22);
-            this.txtEmail.TabIndex = 3;
+            this.txtMaNV.Location = new System.Drawing.Point(163, 107);
+            this.txtMaNV.Name = "txtMaNV";
+            this.txtMaNV.Size = new System.Drawing.Size(301, 22);
+            this.txtMaNV.TabIndex = 3;
             // 
             // txtMatKhau
             // 
@@ -111,12 +111,13 @@
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnDangNhap);
             this.Controls.Add(this.txtMatKhau);
-            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtMaNV);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "DangNhap";
             this.Text = "Đăng nhập";
+            this.Load += new System.EventHandler(this.DangNhap_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -127,7 +128,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtMaNV;
         private System.Windows.Forms.TextBox txtMatKhau;
         private System.Windows.Forms.Button btnDangNhap;
         private System.Windows.Forms.Button btnXoa;

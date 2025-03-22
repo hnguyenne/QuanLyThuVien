@@ -100,6 +100,7 @@
             this.btnThemNV.TabIndex = 5;
             this.btnThemNV.Text = "Thêm";
             this.btnThemNV.UseVisualStyleBackColor = true;
+            this.btnThemNV.Click += new System.EventHandler(this.btnThemNV_Click);
             // 
             // btnThemSach
             // 

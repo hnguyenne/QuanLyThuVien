@@ -31,7 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtMaNV = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -51,32 +51,32 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(55, 107);
+            this.label2.Location = new System.Drawing.Point(40, 110);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 16);
+            this.label2.Size = new System.Drawing.Size(41, 16);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Mã nhân viên";
+            this.label2.Text = "Email";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(55, 213);
+            this.label3.Location = new System.Drawing.Point(40, 213);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "Mật khẩu";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // txtMaNV
+            // txtEmail
             // 
-            this.txtMaNV.Location = new System.Drawing.Point(175, 104);
-            this.txtMaNV.Name = "txtMaNV";
-            this.txtMaNV.Size = new System.Drawing.Size(301, 22);
-            this.txtMaNV.TabIndex = 3;
+            this.txtEmail.Location = new System.Drawing.Point(163, 107);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(301, 22);
+            this.txtEmail.TabIndex = 3;
             // 
             // txtMatKhau
             // 
-            this.txtMatKhau.Location = new System.Drawing.Point(175, 210);
+            this.txtMatKhau.Location = new System.Drawing.Point(163, 210);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.PasswordChar = '*';
             this.txtMatKhau.Size = new System.Drawing.Size(301, 22);
@@ -85,7 +85,7 @@
             // 
             // btnDangNhap
             // 
-            this.btnDangNhap.Location = new System.Drawing.Point(294, 321);
+            this.btnDangNhap.Location = new System.Drawing.Point(306, 321);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(133, 35);
             this.btnDangNhap.TabIndex = 5;
@@ -95,7 +95,7 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(143, 321);
+            this.btnXoa.Location = new System.Drawing.Point(110, 321);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(133, 35);
             this.btnXoa.TabIndex = 6;
@@ -111,7 +111,7 @@
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnDangNhap);
             this.Controls.Add(this.txtMatKhau);
-            this.Controls.Add(this.txtMaNV);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -127,7 +127,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtMaNV;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtMatKhau;
         private System.Windows.Forms.Button btnDangNhap;
         private System.Windows.Forms.Button btnXoa;

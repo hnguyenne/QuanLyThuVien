@@ -35,38 +35,48 @@ namespace QuanLyThuVien
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
+            if (txtEmail.Text == "admin" && txtMatKhau.Text == "admin")
             {
-                clsDatabase.OpenConnection();
-                SqlCommand com = new SqlCommand("select count(*) from nhan_vien where ma_nhan_vien = @QLTVmanv and mat_khau = @QLTVmat_khau", clsDatabase.con);
-
-                SqlParameter p1 = new SqlParameter("@QLTVmanv", SqlDbType.Int);
-                p1.Value = int.Parse(txtMaNV.Text);
-                SqlParameter p2 = new SqlParameter("@QLTVmat_khau", SqlDbType.VarChar);
-                p2.Value = txtMatKhau.Text;
-
-                com.Parameters.Add(p1);
-                com.Parameters.Add(p2);
-
-                int count = (int)com.ExecuteScalar();
-                if (count > 0)
+                frmTrangChuAdmin admin = new frmTrangChuAdmin();
+                admin.Show();
+                this.Hide();
+            }
+            else
+            {
+                try
                 {
-                    frmTrangChuAdmin admin = new frmTrangChuAdmin();
-                    admin.Show();
-                    this.Hide();
+                    clsDatabase.OpenConnection();
+                    SqlCommand com = new SqlCommand("select count(*) from nhan_vien where email = @QLTVemail and mat_khau = @QLTVmat_khau", clsDatabase.con);
+
+                    SqlParameter p1 = new SqlParameter("@QLTVemail", SqlDbType.VarChar);
+                    p1.Value = txtEmail.Text;
+                    SqlParameter p2 = new SqlParameter("@QLTVmat_khau", SqlDbType.VarChar);
+                    p2.Value = txtMatKhau.Text;
+
+                    com.Parameters.Add(p1);
+                    com.Parameters.Add(p2);
+
+                    int count = (int)com.ExecuteScalar();
+                    if (count > 0)
+                    {
+                        frmTrangChuAdmin admin = new frmTrangChuAdmin();
+                        admin.Show();
+                        this.Hide();
+                    }
+                    else MessageBox.Show("Email hoặc mật khẩu không đúng");
+                    clsDatabase.CloseConnection();
                 }
-                else MessageBox.Show("Mã cán bộ hoặc mật khẩu không đúng");
-                clsDatabase.CloseConnection();
+                catch (Exception)
+                {
+                    MessageBox.Show("Email hoặc mật khẩu không hợp lệ");
+                }
             }
-            catch (Exception)
-            {
-                MessageBox.Show("Mã cán bộ hoặc mật khẩu không hợp lệ");
-            }
+ 
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            txtMaNV.Clear();
+            txtEmail.Clear();
             txtMatKhau.Clear();
         }
     }

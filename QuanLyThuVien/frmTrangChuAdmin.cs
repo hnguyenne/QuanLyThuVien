@@ -36,5 +36,12 @@ namespace QuanLyThuVien
             frmThemSach.Show();
             this.Hide();
         }
+
+        private void btnThemNV_Click(object sender, EventArgs e)
+        {
+            frmThemNhanVien frmThemNhanVien = new frmThemNhanVien();
+            frmThemNhanVien.Show();
+            this.Hide();
+        }
     }
 }

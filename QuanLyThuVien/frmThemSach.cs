@@ -13,9 +13,11 @@ namespace QuanLyThuVien
 {
     public partial class frmThemSach : Form
     {
-        public frmThemSach()
+        private Form previousForm;
+        public frmThemSach(Form previousForm)
         {
             InitializeComponent();
+            this.previousForm = previousForm;
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -61,6 +63,27 @@ namespace QuanLyThuVien
                 MessageBox.Show("Thêm sách không thành công", ex.Message);
             }
 
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            txtNamXB.Clear();
+            txtTheLoai.Clear();
+            txtSoLuong.Clear();
+            txtNhaXB.Clear();
+            txtTacGia.Clear();
+            txtTenSach.Clear();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close(); // Close the current form
+            previousForm.Show();
         }
     }
 }

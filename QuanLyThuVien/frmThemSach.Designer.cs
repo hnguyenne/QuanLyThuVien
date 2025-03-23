@@ -42,6 +42,9 @@
             this.txtNhaXB = new System.Windows.Forms.TextBox();
             this.txtNamXB = new System.Windows.Forms.TextBox();
             this.btnThemSach = new System.Windows.Forms.Button();
+            this.btnThoat = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -113,59 +116,92 @@
             // 
             this.txtTenSach.Location = new System.Drawing.Point(158, 68);
             this.txtTenSach.Name = "txtTenSach";
-            this.txtTenSach.Size = new System.Drawing.Size(100, 22);
+            this.txtTenSach.Size = new System.Drawing.Size(170, 22);
             this.txtTenSach.TabIndex = 7;
             // 
             // txtTacGia
             // 
             this.txtTacGia.Location = new System.Drawing.Point(158, 167);
             this.txtTacGia.Name = "txtTacGia";
-            this.txtTacGia.Size = new System.Drawing.Size(100, 22);
+            this.txtTacGia.Size = new System.Drawing.Size(170, 22);
             this.txtTacGia.TabIndex = 8;
             // 
             // txtTheLoai
             // 
             this.txtTheLoai.Location = new System.Drawing.Point(158, 279);
             this.txtTheLoai.Name = "txtTheLoai";
-            this.txtTheLoai.Size = new System.Drawing.Size(100, 22);
+            this.txtTheLoai.Size = new System.Drawing.Size(170, 22);
             this.txtTheLoai.TabIndex = 9;
             // 
             // txtSoLuong
             // 
             this.txtSoLuong.Location = new System.Drawing.Point(596, 282);
             this.txtSoLuong.Name = "txtSoLuong";
-            this.txtSoLuong.Size = new System.Drawing.Size(100, 22);
+            this.txtSoLuong.Size = new System.Drawing.Size(121, 22);
             this.txtSoLuong.TabIndex = 10;
             // 
             // txtNhaXB
             // 
             this.txtNhaXB.Location = new System.Drawing.Point(596, 170);
             this.txtNhaXB.Name = "txtNhaXB";
-            this.txtNhaXB.Size = new System.Drawing.Size(100, 22);
+            this.txtNhaXB.Size = new System.Drawing.Size(121, 22);
             this.txtNhaXB.TabIndex = 11;
             // 
             // txtNamXB
             // 
             this.txtNamXB.Location = new System.Drawing.Point(596, 65);
             this.txtNamXB.Name = "txtNamXB";
-            this.txtNamXB.Size = new System.Drawing.Size(100, 22);
+            this.txtNamXB.Size = new System.Drawing.Size(121, 22);
             this.txtNamXB.TabIndex = 12;
             // 
             // btnThemSach
             // 
-            this.btnThemSach.Location = new System.Drawing.Point(339, 375);
+            this.btnThemSach.Location = new System.Drawing.Point(437, 368);
             this.btnThemSach.Name = "btnThemSach";
-            this.btnThemSach.Size = new System.Drawing.Size(121, 23);
+            this.btnThemSach.Size = new System.Drawing.Size(121, 45);
             this.btnThemSach.TabIndex = 13;
             this.btnThemSach.Text = "Thêm sách";
             this.btnThemSach.UseVisualStyleBackColor = true;
             this.btnThemSach.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.Location = new System.Drawing.Point(596, 368);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(121, 45);
+            this.btnThoat.TabIndex = 14;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Location = new System.Drawing.Point(256, 368);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(121, 45);
+            this.btnXoa.TabIndex = 15;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(84, 368);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(121, 45);
+            this.btnBack.TabIndex = 16;
+            this.btnBack.Text = "Quay về";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // frmThemSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.btnXoa);
+            this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnThemSach);
             this.Controls.Add(this.txtNamXB);
             this.Controls.Add(this.txtNhaXB);
@@ -203,5 +239,8 @@
         private System.Windows.Forms.TextBox txtNhaXB;
         private System.Windows.Forms.TextBox txtNamXB;
         private System.Windows.Forms.Button btnThemSach;
+        private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.Button btnBack;
     }
 }

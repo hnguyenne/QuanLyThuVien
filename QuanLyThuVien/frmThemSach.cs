@@ -62,5 +62,12 @@ namespace QuanLyThuVien
             }
 
         }
+
+        private void btnQuayVe_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmTrangChuAdmin Frm = new frmTrangChuAdmin();
+            Frm.Show();
+        }
     }
 }

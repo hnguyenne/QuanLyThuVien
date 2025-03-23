@@ -42,6 +42,7 @@
             this.txtNhaXB = new System.Windows.Forms.TextBox();
             this.txtNamXB = new System.Windows.Forms.TextBox();
             this.btnThemSach = new System.Windows.Forms.Button();
+            this.btnQuayVe = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -153,19 +154,30 @@
             // 
             // btnThemSach
             // 
-            this.btnThemSach.Location = new System.Drawing.Point(339, 375);
+            this.btnThemSach.Location = new System.Drawing.Point(158, 375);
             this.btnThemSach.Name = "btnThemSach";
-            this.btnThemSach.Size = new System.Drawing.Size(121, 23);
+            this.btnThemSach.Size = new System.Drawing.Size(132, 43);
             this.btnThemSach.TabIndex = 13;
             this.btnThemSach.Text = "Thêm sách";
             this.btnThemSach.UseVisualStyleBackColor = true;
             this.btnThemSach.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnQuayVe
+            // 
+            this.btnQuayVe.Location = new System.Drawing.Point(468, 375);
+            this.btnQuayVe.Name = "btnQuayVe";
+            this.btnQuayVe.Size = new System.Drawing.Size(132, 43);
+            this.btnQuayVe.TabIndex = 14;
+            this.btnQuayVe.Text = "Quay về";
+            this.btnQuayVe.UseVisualStyleBackColor = true;
+            this.btnQuayVe.Click += new System.EventHandler(this.btnQuayVe_Click);
             // 
             // frmThemSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnQuayVe);
             this.Controls.Add(this.btnThemSach);
             this.Controls.Add(this.txtNamXB);
             this.Controls.Add(this.txtNhaXB);
@@ -203,5 +215,6 @@
         private System.Windows.Forms.TextBox txtNhaXB;
         private System.Windows.Forms.TextBox txtNamXB;
         private System.Windows.Forms.Button btnThemSach;
+        private System.Windows.Forms.Button btnQuayVe;
     }
 }

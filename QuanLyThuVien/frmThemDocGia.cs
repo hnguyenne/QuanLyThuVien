@@ -14,11 +14,12 @@ namespace QuanLyThuVien
 {
     public partial class frmThemDocGia : Form
     {
-        public frmThemDocGia()
+        int manv;
+        public frmThemDocGia(int manv)
         {
             InitializeComponent();
             dateNgaySinh.MaxDate = DateTime.Now;
-
+            this.manv = manv;
         }
 
 
@@ -87,6 +88,13 @@ namespace QuanLyThuVien
         private void btnHuy_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnQuayVe_Click(object sender, EventArgs e)
+        {
+            frmTrangChuNV frmTrangChuNV = new frmTrangChuNV(manv);
+            frmTrangChuNV.Show();
+            this.Close();
         }
     }
 }

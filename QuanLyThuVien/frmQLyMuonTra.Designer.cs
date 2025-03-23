@@ -31,6 +31,7 @@
             this.btnbackTC = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnTraSach = new System.Windows.Forms.Button();
             this.btnxoa = new System.Windows.Forms.Button();
             this.dtpngaytra = new System.Windows.Forms.DateTimePicker();
             this.dtphantra = new System.Windows.Forms.DateTimePicker();
@@ -45,7 +46,6 @@
             this.lablmadocgia = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lvMuonSach = new System.Windows.Forms.ListView();
-            this.btnTraSach = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -54,9 +54,9 @@
             // 
             this.btnbackTC.Location = new System.Drawing.Point(27, 24);
             this.btnbackTC.Name = "btnbackTC";
-            this.btnbackTC.Size = new System.Drawing.Size(92, 36);
+            this.btnbackTC.Size = new System.Drawing.Size(128, 36);
             this.btnbackTC.TabIndex = 5;
-            this.btnbackTC.Text = "Trang Chủ";
+            this.btnbackTC.Text = "Quay về";
             this.btnbackTC.UseVisualStyleBackColor = true;
             this.btnbackTC.Click += new System.EventHandler(this.btnbackTC_Click);
             // 
@@ -64,7 +64,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(182, 28);
+            this.label1.Location = new System.Drawing.Point(221, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(359, 32);
             this.label1.TabIndex = 6;
@@ -92,10 +92,21 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thao Tác";
             // 
+            // btnTraSach
+            // 
+            this.btnTraSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnTraSach.Location = new System.Drawing.Point(103, 190);
+            this.btnTraSach.Name = "btnTraSach";
+            this.btnTraSach.Size = new System.Drawing.Size(101, 35);
+            this.btnTraSach.TabIndex = 16;
+            this.btnTraSach.Text = "Trả Sách";
+            this.btnTraSach.UseVisualStyleBackColor = true;
+            this.btnTraSach.Click += new System.EventHandler(this.btnTraSach_Click);
+            // 
             // btnxoa
             // 
             this.btnxoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnxoa.Location = new System.Drawing.Point(469, 190);
+            this.btnxoa.Location = new System.Drawing.Point(460, 190);
             this.btnxoa.Name = "btnxoa";
             this.btnxoa.Size = new System.Drawing.Size(75, 35);
             this.btnxoa.TabIndex = 15;
@@ -107,27 +118,27 @@
             // 
             this.dtpngaytra.Location = new System.Drawing.Point(362, 132);
             this.dtpngaytra.Name = "dtpngaytra";
-            this.dtpngaytra.Size = new System.Drawing.Size(122, 22);
+            this.dtpngaytra.Size = new System.Drawing.Size(272, 22);
             this.dtpngaytra.TabIndex = 14;
             // 
             // dtphantra
             // 
             this.dtphantra.Location = new System.Drawing.Point(362, 87);
             this.dtphantra.Name = "dtphantra";
-            this.dtphantra.Size = new System.Drawing.Size(122, 22);
+            this.dtphantra.Size = new System.Drawing.Size(272, 22);
             this.dtphantra.TabIndex = 13;
             // 
             // dtpngaymuon
             // 
             this.dtpngaymuon.Location = new System.Drawing.Point(362, 42);
             this.dtpngaymuon.Name = "dtpngaymuon";
-            this.dtpngaymuon.Size = new System.Drawing.Size(122, 22);
+            this.dtpngaymuon.Size = new System.Drawing.Size(272, 22);
             this.dtpngaymuon.TabIndex = 12;
             // 
             // btnluu
             // 
             this.btnluu.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnluu.Location = new System.Drawing.Point(290, 190);
+            this.btnluu.Location = new System.Drawing.Point(293, 190);
             this.btnluu.Name = "btnluu";
             this.btnluu.Size = new System.Drawing.Size(75, 35);
             this.btnluu.TabIndex = 1;
@@ -213,17 +224,6 @@
             this.lvMuonSach.TabIndex = 0;
             this.lvMuonSach.UseCompatibleStateImageBehavior = false;
             // 
-            // btnTraSach
-            // 
-            this.btnTraSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnTraSach.Location = new System.Drawing.Point(103, 190);
-            this.btnTraSach.Name = "btnTraSach";
-            this.btnTraSach.Size = new System.Drawing.Size(101, 35);
-            this.btnTraSach.TabIndex = 16;
-            this.btnTraSach.Text = "Trả Sách";
-            this.btnTraSach.UseVisualStyleBackColor = true;
-            this.btnTraSach.Click += new System.EventHandler(this.btnTraSach_Click);
-            // 
             // frmQLyMuonTra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -234,7 +234,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnbackTC);
             this.Name = "frmQLyMuonTra";
-            this.Text = "frmQLyMuonTra";
+            this.Text = "Quản lý mượn trả sách";
             this.Load += new System.EventHandler(this.frmQLyMuonTra_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

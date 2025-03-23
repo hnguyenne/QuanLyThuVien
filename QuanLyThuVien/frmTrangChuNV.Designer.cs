@@ -37,6 +37,7 @@
             this.lblLayHoTenNV = new System.Windows.Forms.Label();
             this.lvDSSach = new System.Windows.Forms.ListView();
             this.btnThemDocGia = new System.Windows.Forms.Button();
+            this.btnDangXuat = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblTrangChu
@@ -51,7 +52,8 @@
             // 
             // btnTimKiem
             // 
-            this.btnTimKiem.Location = new System.Drawing.Point(443, 31);
+            this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiem.Location = new System.Drawing.Point(423, 31);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(151, 44);
             this.btnTimKiem.TabIndex = 7;
@@ -61,9 +63,10 @@
             // 
             // btnQLMuonTra
             // 
-            this.btnQLMuonTra.Location = new System.Drawing.Point(617, 31);
+            this.btnQLMuonTra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLMuonTra.Location = new System.Drawing.Point(600, 31);
             this.btnQLMuonTra.Name = "btnQLMuonTra";
-            this.btnQLMuonTra.Size = new System.Drawing.Size(158, 44);
+            this.btnQLMuonTra.Size = new System.Drawing.Size(232, 44);
             this.btnQLMuonTra.TabIndex = 9;
             this.btnQLMuonTra.Text = "Quản Lý Mượn Trả";
             this.btnQLMuonTra.UseVisualStyleBackColor = true;
@@ -110,13 +113,14 @@
             this.lvDSSach.HideSelection = false;
             this.lvDSSach.Location = new System.Drawing.Point(38, 170);
             this.lvDSSach.Name = "lvDSSach";
-            this.lvDSSach.Size = new System.Drawing.Size(750, 268);
+            this.lvDSSach.Size = new System.Drawing.Size(794, 268);
             this.lvDSSach.TabIndex = 14;
             this.lvDSSach.UseCompatibleStateImageBehavior = false;
             // 
             // btnThemDocGia
             // 
-            this.btnThemDocGia.Location = new System.Drawing.Point(266, 31);
+            this.btnThemDocGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemDocGia.Location = new System.Drawing.Point(248, 31);
             this.btnThemDocGia.Name = "btnThemDocGia";
             this.btnThemDocGia.Size = new System.Drawing.Size(151, 44);
             this.btnThemDocGia.TabIndex = 15;
@@ -124,11 +128,23 @@
             this.btnThemDocGia.UseVisualStyleBackColor = true;
             this.btnThemDocGia.Click += new System.EventHandler(this.btnThemDocGia_Click);
             // 
+            // btnDangXuat
+            // 
+            this.btnDangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangXuat.Location = new System.Drawing.Point(674, 106);
+            this.btnDangXuat.Name = "btnDangXuat";
+            this.btnDangXuat.Size = new System.Drawing.Size(158, 44);
+            this.btnDangXuat.TabIndex = 16;
+            this.btnDangXuat.Text = "Đăng Xuất";
+            this.btnDangXuat.UseVisualStyleBackColor = true;
+            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
+            // 
             // frmTrangChuNV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(867, 450);
+            this.Controls.Add(this.btnDangXuat);
             this.Controls.Add(this.btnThemDocGia);
             this.Controls.Add(this.lvDSSach);
             this.Controls.Add(this.lblLayHoTenNV);
@@ -139,7 +155,7 @@
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.lblTrangChu);
             this.Name = "frmTrangChuNV";
-            this.Text = "frmTrangChuNV";
+            this.Text = "Trang chủ nhân viên";
             this.Load += new System.EventHandler(this.frmTrangChuNV_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -157,5 +173,6 @@
         private System.Windows.Forms.Label lblLayHoTenNV;
         private System.Windows.Forms.ListView lvDSSach;
         private System.Windows.Forms.Button btnThemDocGia;
+        private System.Windows.Forms.Button btnDangXuat;
     }
 }

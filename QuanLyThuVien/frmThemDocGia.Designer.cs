@@ -42,6 +42,7 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
             this.dateNgaySinh = new System.Windows.Forms.DateTimePicker();
+            this.btnQuayVe = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -121,7 +122,7 @@
             // btnXacNhan
             // 
             this.btnXacNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXacNhan.Location = new System.Drawing.Point(96, 301);
+            this.btnXacNhan.Location = new System.Drawing.Point(163, 301);
             this.btnXacNhan.Name = "btnXacNhan";
             this.btnXacNhan.Size = new System.Drawing.Size(131, 39);
             this.btnXacNhan.TabIndex = 9;
@@ -150,7 +151,7 @@
             // btnXoa
             // 
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Location = new System.Drawing.Point(273, 301);
+            this.btnXoa.Location = new System.Drawing.Point(349, 301);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(99, 39);
             this.btnXoa.TabIndex = 14;
@@ -161,7 +162,7 @@
             // btnHuy
             // 
             this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuy.Location = new System.Drawing.Point(461, 301);
+            this.btnHuy.Location = new System.Drawing.Point(507, 301);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(99, 39);
             this.btnHuy.TabIndex = 15;
@@ -178,11 +179,23 @@
             this.dateNgaySinh.Size = new System.Drawing.Size(253, 22);
             this.dateNgaySinh.TabIndex = 16;
             // 
+            // btnQuayVe
+            // 
+            this.btnQuayVe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuayVe.Location = new System.Drawing.Point(41, 301);
+            this.btnQuayVe.Name = "btnQuayVe";
+            this.btnQuayVe.Size = new System.Drawing.Size(99, 39);
+            this.btnQuayVe.TabIndex = 17;
+            this.btnQuayVe.Text = "Quay về";
+            this.btnQuayVe.UseVisualStyleBackColor = true;
+            this.btnQuayVe.Click += new System.EventHandler(this.btnQuayVe_Click);
+            // 
             // frmThemDocGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(647, 365);
+            this.ClientSize = new System.Drawing.Size(647, 391);
+            this.Controls.Add(this.btnQuayVe);
             this.Controls.Add(this.dateNgaySinh);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnXoa);
@@ -220,5 +233,6 @@
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.DateTimePicker dateNgaySinh;
+        private System.Windows.Forms.Button btnQuayVe;
     }
 }

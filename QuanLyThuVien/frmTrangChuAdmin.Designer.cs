@@ -35,6 +35,7 @@
             this.btnXoaNV = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnTimKiemSach = new System.Windows.Forms.Button();
+            this.btnDangXuat = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -52,10 +53,11 @@
             // 
             // btnThemNV
             // 
+            this.btnThemNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemNV.Location = new System.Drawing.Point(17, 44);
             this.btnThemNV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThemNV.Name = "btnThemNV";
-            this.btnThemNV.Size = new System.Drawing.Size(207, 35);
+            this.btnThemNV.Size = new System.Drawing.Size(229, 35);
             this.btnThemNV.TabIndex = 5;
             this.btnThemNV.Text = "Thêm";
             this.btnThemNV.UseVisualStyleBackColor = true;
@@ -63,10 +65,11 @@
             // 
             // btnThemSach
             // 
+            this.btnThemSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemSach.Location = new System.Drawing.Point(20, 44);
             this.btnThemSach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThemSach.Name = "btnThemSach";
-            this.btnThemSach.Size = new System.Drawing.Size(207, 35);
+            this.btnThemSach.Size = new System.Drawing.Size(217, 35);
             this.btnThemSach.TabIndex = 6;
             this.btnThemSach.Text = "Thêm";
             this.btnThemSach.UseVisualStyleBackColor = true;
@@ -88,10 +91,11 @@
             // 
             // btnXoaNV
             // 
+            this.btnXoaNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoaNV.Location = new System.Drawing.Point(17, 110);
             this.btnXoaNV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoaNV.Name = "btnXoaNV";
-            this.btnXoaNV.Size = new System.Drawing.Size(207, 35);
+            this.btnXoaNV.Size = new System.Drawing.Size(229, 35);
             this.btnXoaNV.TabIndex = 8;
             this.btnXoaNV.Text = "Quản lý nhân viên";
             this.btnXoaNV.UseVisualStyleBackColor = true;
@@ -112,26 +116,40 @@
             // 
             // btnTimKiemSach
             // 
+            this.btnTimKiemSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimKiemSach.Location = new System.Drawing.Point(20, 110);
             this.btnTimKiemSach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTimKiemSach.Name = "btnTimKiemSach";
-            this.btnTimKiemSach.Size = new System.Drawing.Size(207, 35);
+            this.btnTimKiemSach.Size = new System.Drawing.Size(217, 35);
             this.btnTimKiemSach.TabIndex = 12;
             this.btnTimKiemSach.Text = "Quản lý sách";
             this.btnTimKiemSach.UseVisualStyleBackColor = true;
             this.btnTimKiemSach.Click += new System.EventHandler(this.btnTimKiemSach_Click);
             // 
+            // btnDangXuat
+            // 
+            this.btnDangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangXuat.Location = new System.Drawing.Point(238, 335);
+            this.btnDangXuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDangXuat.Name = "btnDangXuat";
+            this.btnDangXuat.Size = new System.Drawing.Size(207, 35);
+            this.btnDangXuat.TabIndex = 13;
+            this.btnDangXuat.Text = "Đăng xuất";
+            this.btnDangXuat.UseVisualStyleBackColor = true;
+            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
+            // 
             // frmTrangChuAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(691, 362);
+            this.ClientSize = new System.Drawing.Size(691, 405);
+            this.Controls.Add(this.btnDangXuat);
             this.Controls.Add(this.lblTrangChu);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmTrangChuAdmin";
-            this.Text = "frmTrangChu";
+            this.Text = "Trang chủ Admin";
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -148,5 +166,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnXoaNV;
         private System.Windows.Forms.Button btnTimKiemSach;
+        private System.Windows.Forms.Button btnDangXuat;
     }
 }

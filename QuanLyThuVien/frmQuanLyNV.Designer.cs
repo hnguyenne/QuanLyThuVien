@@ -61,9 +61,10 @@
             // 
             // button1
             // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(93, 408);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 30);
+            this.button1.Size = new System.Drawing.Size(100, 41);
             this.button1.TabIndex = 2;
             this.button1.Text = "Quay về";
             this.button1.UseVisualStyleBackColor = true;
@@ -71,9 +72,10 @@
             // 
             // btnXoa
             // 
+            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.Location = new System.Drawing.Point(566, 408);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(143, 30);
+            this.btnXoa.Size = new System.Drawing.Size(143, 41);
             this.btnXoa.TabIndex = 3;
             this.btnXoa.Text = "Xóa nhân viên";
             this.btnXoa.UseVisualStyleBackColor = true;
@@ -81,28 +83,32 @@
             // 
             // txtTim
             // 
+            this.txtTim.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTim.Location = new System.Drawing.Point(93, 96);
             this.txtTim.Name = "txtTim";
-            this.txtTim.Size = new System.Drawing.Size(267, 22);
+            this.txtTim.Size = new System.Drawing.Size(308, 27);
             this.txtTim.TabIndex = 4;
+            this.txtTim.Text = "Nhập thông tin cần tìm";
             // 
             // cboTim
             // 
+            this.cboTim.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTim.FormattingEnabled = true;
             this.cboTim.Items.AddRange(new object[] {
             "Mã nhân viên",
             "Tên nhân viên"});
-            this.cboTim.Location = new System.Drawing.Point(456, 93);
+            this.cboTim.Location = new System.Drawing.Point(554, 94);
             this.cboTim.Name = "cboTim";
-            this.cboTim.Size = new System.Drawing.Size(121, 24);
+            this.cboTim.Size = new System.Drawing.Size(155, 28);
             this.cboTim.TabIndex = 5;
             this.cboTim.Text = "Tìm kiếm bằng";
             // 
             // btnTim
             // 
-            this.btnTim.Location = new System.Drawing.Point(620, 93);
+            this.btnTim.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTim.Location = new System.Drawing.Point(407, 94);
             this.btnTim.Name = "btnTim";
-            this.btnTim.Size = new System.Drawing.Size(89, 25);
+            this.btnTim.Size = new System.Drawing.Size(89, 30);
             this.btnTim.TabIndex = 6;
             this.btnTim.Text = "Tìm";
             this.btnTim.UseVisualStyleBackColor = true;
@@ -110,19 +116,20 @@
             // 
             // btnCapNhat
             // 
-            this.btnCapNhat.Location = new System.Drawing.Point(305, 408);
+            this.btnCapNhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCapNhat.Location = new System.Drawing.Point(324, 408);
             this.btnCapNhat.Name = "btnCapNhat";
-            this.btnCapNhat.Size = new System.Drawing.Size(143, 30);
+            this.btnCapNhat.Size = new System.Drawing.Size(143, 41);
             this.btnCapNhat.TabIndex = 7;
             this.btnCapNhat.Text = "Cập nhật";
             this.btnCapNhat.UseVisualStyleBackColor = true;
             this.btnCapNhat.Click += new System.EventHandler(this.button2_Click_1);
             // 
-            // frmXoaNhanVien
+            // frmQuanLyNV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 531);
+            this.ClientSize = new System.Drawing.Size(800, 500);
             this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.btnTim);
             this.Controls.Add(this.cboTim);
@@ -131,8 +138,8 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtgvNhanVien);
-            this.Name = "frmXoaNhanVien";
-            this.Text = "Xóa bỏ nhân viên";
+            this.Name = "frmQuanLyNV";
+            this.Text = "Quản lý nhân viên";
             this.Load += new System.EventHandler(this.frmXoaNhanVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvNhanVien)).EndInit();
             this.ResumeLayout(false);

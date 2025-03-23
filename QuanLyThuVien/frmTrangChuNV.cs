@@ -107,9 +107,16 @@ namespace QuanLyThuVien
 
         private void btnThemDocGia_Click(object sender, EventArgs e)
         {
-            frmThemDocGia frmThemDocGia = new frmThemDocGia();
+            frmThemDocGia frmThemDocGia = new frmThemDocGia(manv);
             frmThemDocGia.Show();
             this.Hide();
+        }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            DangNhap frmDangNhap = new DangNhap();
+            frmDangNhap.Show();
+            this.Close();
         }
     }
 }

@@ -43,7 +43,7 @@
             // 
             this.lblTrangChu.AutoSize = true;
             this.lblTrangChu.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTrangChu.Location = new System.Drawing.Point(276, 18);
+            this.lblTrangChu.Location = new System.Drawing.Point(241, 18);
             this.lblTrangChu.Name = "lblTrangChu";
             this.lblTrangChu.Size = new System.Drawing.Size(240, 31);
             this.lblTrangChu.TabIndex = 0;

@@ -10,7 +10,7 @@ create table sach(
 	nam int check (nam > 1000 and nam < 2025),
 	the_loai nvarchar(50) not null,
 	so_luong_tong int not null,
-	sl_con_lai int not null
+	sl_con_lai int not null check (sl_con_lai <= so_luong_tong)
 );
 
 Create table doc_gia(
@@ -37,8 +37,8 @@ Create table muon(
 	ma_sach int references sach(ma_sach) on update cascade on delete cascade,
 	ngay_muon date not null default sysdatetime(),
 	ngay_het_han date not null,
-	ngay_tra date,
-	trang_thai varchar(12) check(trang_thai in (N'Đang mượn', N'Đã trả' , N'Đã hết hạn')) --có thể không cần
+	ngay_tra date check (ngay_tra >= ngay_muon),
+	trang_thai varchar(12) check(trang_thai in (N'Đang mượn', N'Đã trả' , N'Đã hết hạn')) not null --có thể không cần
 );
 
 Create table phat(

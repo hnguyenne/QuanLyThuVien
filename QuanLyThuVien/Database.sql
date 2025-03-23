@@ -40,6 +40,12 @@ Create table muon(
 	ngay_tra date,
 );
 
+ALTER TABLE muon 
+ADD ma_nhan_vien INT;
+
+ALTER TABLE muon 
+ADD CONSTRAINT fk_muon_nhan_vien FOREIGN KEY (ma_nhan_vien) REFERENCES nhan_vien(ma_nhan_vien);
+
 Create table phat(
 	ma_phat_tien int identity(1,1) primary key,
 	ma_muon int references muon(ma_muon) on update cascade on delete cascade,

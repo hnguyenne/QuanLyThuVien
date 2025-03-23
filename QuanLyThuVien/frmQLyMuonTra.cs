@@ -17,6 +17,7 @@ namespace QuanLyThuVien
         public frmQLyMuonTra(int Manv)
         {
             InitializeComponent();
+            this.manv = Manv;
         }
 
         private void btnbackTC_Click(object sender, EventArgs e)
@@ -34,6 +35,7 @@ namespace QuanLyThuVien
                 MessageBox.Show("Vui lòng nhập đúng định dạng Mã độc giả và Mã sách!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+       
             string ngayMuon = dtpngaymuon.Value.ToString("yyyy-MM-dd");
             string hanTra = dtphantra.Value.ToString("yyyy-MM-dd");
             object ngayTra = DBNull.Value;
@@ -58,8 +60,8 @@ namespace QuanLyThuVien
                     WHERE ma_doc_gia = @MaDocGia AND ma_sach = @MaSach;
                 ELSE
                     update sach set sl_con_lai = sl_con_lai - 1 where ma_sach = @MaSach;
-                    INSERT INTO muon (ma_doc_gia, ma_sach, ngay_muon, ngay_het_han, ngay_tra)
-                    VALUES (@MaDocGia, @MaSach, @NgayMuon, @HanTra, @NgayTra);";
+                    INSERT INTO muon (ma_doc_gia, ma_sach, ngay_muon, ngay_het_han, ngay_tra, ma_nhan_vien)
+                    VALUES (@MaDocGia, @MaSach, @NgayMuon, @HanTra, @NgayTra, @MaNhanVien);";
                     
             SqlCommand cmd = new SqlCommand(query, clsDatabase.con);
 
@@ -68,6 +70,7 @@ namespace QuanLyThuVien
             cmd.Parameters.AddWithValue("@NgayMuon", ngayMuon);
             cmd.Parameters.AddWithValue("@HanTra", hanTra);
             cmd.Parameters.AddWithValue("@NgayTra", ngayTra);
+            cmd.Parameters.AddWithValue("@MaNhanVien", manv);
 
             cmd.ExecuteNonQuery();
 

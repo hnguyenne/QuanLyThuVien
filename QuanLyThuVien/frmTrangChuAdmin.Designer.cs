@@ -31,7 +31,6 @@
             this.lblTrangChu = new System.Windows.Forms.Label();
             this.btnThemNV = new System.Windows.Forms.Button();
             this.btnThemSach = new System.Windows.Forms.Button();
-            this.btnCapNhatNV = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnXoaNV = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -53,7 +52,7 @@
             // 
             // btnThemNV
             // 
-            this.btnThemNV.Location = new System.Drawing.Point(17, 28);
+            this.btnThemNV.Location = new System.Drawing.Point(17, 44);
             this.btnThemNV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThemNV.Name = "btnThemNV";
             this.btnThemNV.Size = new System.Drawing.Size(207, 35);
@@ -73,21 +72,9 @@
             this.btnThemSach.UseVisualStyleBackColor = true;
             this.btnThemSach.Click += new System.EventHandler(this.btnThemSach_Click);
             // 
-            // btnCapNhatNV
-            // 
-            this.btnCapNhatNV.Location = new System.Drawing.Point(17, 76);
-            this.btnCapNhatNV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCapNhatNV.Name = "btnCapNhatNV";
-            this.btnCapNhatNV.Size = new System.Drawing.Size(207, 35);
-            this.btnCapNhatNV.TabIndex = 7;
-            this.btnCapNhatNV.Text = "Cập nhật thông tin";
-            this.btnCapNhatNV.UseVisualStyleBackColor = true;
-            this.btnCapNhatNV.Click += new System.EventHandler(this.btnCapNhatNV_Click);
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnXoaNV);
-            this.groupBox1.Controls.Add(this.btnCapNhatNV);
             this.groupBox1.Controls.Add(this.btnThemNV);
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Location = new System.Drawing.Point(44, 85);
@@ -101,12 +88,12 @@
             // 
             // btnXoaNV
             // 
-            this.btnXoaNV.Location = new System.Drawing.Point(17, 123);
+            this.btnXoaNV.Location = new System.Drawing.Point(17, 110);
             this.btnXoaNV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoaNV.Name = "btnXoaNV";
             this.btnXoaNV.Size = new System.Drawing.Size(207, 35);
             this.btnXoaNV.TabIndex = 8;
-            this.btnXoaNV.Text = "Tìm kiếm và xóa";
+            this.btnXoaNV.Text = "Quản lý nhân viên";
             this.btnXoaNV.UseVisualStyleBackColor = true;
             this.btnXoaNV.Click += new System.EventHandler(this.btnXoaNV_Click);
             // 
@@ -157,7 +144,6 @@
         private System.Windows.Forms.Label lblTrangChu;
         private System.Windows.Forms.Button btnThemNV;
         private System.Windows.Forms.Button btnThemSach;
-        private System.Windows.Forms.Button btnCapNhatNV;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnXoaNV;

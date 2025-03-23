@@ -155,6 +155,7 @@
             this.Controls.Add(this.dtgv_sach);
             this.Name = "frmTimSach";
             this.Text = "frmTimSach";
+            this.Load += new System.EventHandler(this.frmTimSach_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_sach)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

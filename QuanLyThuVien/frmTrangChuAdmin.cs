@@ -26,7 +26,7 @@ namespace QuanLyThuVien
         }
         private void btnXoaNV_Click(object sender, EventArgs e)
         {
-            frmXoaNhanVien frmXoaNhanVien = new frmXoaNhanVien();
+            frmQuanLyNV frmXoaNhanVien = new frmQuanLyNV();
             frmXoaNhanVien.Show();
             this.Hide();
         }

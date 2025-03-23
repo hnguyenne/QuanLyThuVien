@@ -253,5 +253,10 @@ namespace QuanLyThuVien
             this.Close(); // Close the current form
             previousForm.Show();
         }
+
+        private void frmTimSach_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

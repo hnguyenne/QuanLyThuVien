@@ -88,9 +88,9 @@ namespace QuanLyThuVien
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            frmTimSach timSach = new frmTimSach(this);
+            frmTimSach qlSach = new frmTimSach(this);
             this.Hide();
-            timSach.Show();
+            qlSach.Show();
         }
 
         private void btnQLSach_Click(object sender, EventArgs e)

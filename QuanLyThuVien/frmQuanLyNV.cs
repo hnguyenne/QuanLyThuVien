@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace QuanLyThuVien
 {
-    public partial class frmXoaNhanVien : Form
+    public partial class frmQuanLyNV : Form
     {
-        public frmXoaNhanVien()
+        public frmQuanLyNV()
         {
             InitializeComponent();
         }
@@ -115,6 +115,36 @@ namespace QuanLyThuVien
             dtgvNhanVien.Columns["email"].HeaderText = "Email";
             dtgvNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             clsDatabase.CloseConnection();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            if (dtgvNhanVien.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn một hàng để cập nhật!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            clsDatabase.OpenConnection();
+            foreach (DataGridViewRow row in dtgvNhanVien.SelectedRows)
+            {
+                if (row.Cells["ho_ten"].Value.ToString() == "" || row.Cells["so_dien_thoai"].Value.ToString() == "" ||
+                    row.Cells["email"].Value.ToString() == "")
+                {
+                    MessageBox.Show("Vui lòng điền đầy đủ thông tin của nhân viên "+ row.Cells["ma_nhan_vien"].Value.ToString());
+                    continue;
+                }
+                string query = @"update nhan_vien set ho_ten=@HoTen, so_dien_thoai=@SDT, email=@Email where ma_nhan_vien =@MaNhanVien";
+
+                SqlCommand cmd = new SqlCommand(query, clsDatabase.con);
+                cmd.Parameters.AddWithValue("@HoTen", row.Cells["ho_ten"].Value.ToString());
+                cmd.Parameters.AddWithValue("@SDT", row.Cells["so_dien_thoai"].Value.ToString());
+                cmd.Parameters.AddWithValue("@Email", row.Cells["email"].Value.ToString());
+                cmd.Parameters.AddWithValue("@MaNhanVien", Convert.ToInt32(row.Cells["ma_nhan_vien"].Value));
+
+                cmd.ExecuteNonQuery();
+            }
+            clsDatabase.CloseConnection();
+            MessageBox.Show("Cập nhật thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

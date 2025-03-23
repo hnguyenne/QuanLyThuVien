@@ -35,11 +35,9 @@
             this.dtpngaytra = new System.Windows.Forms.DateTimePicker();
             this.dtphantra = new System.Windows.Forms.DateTimePicker();
             this.dtpngaymuon = new System.Windows.Forms.DateTimePicker();
-            this.txttienphat = new System.Windows.Forms.TextBox();
             this.btnluu = new System.Windows.Forms.Button();
             this.txtmasach = new System.Windows.Forms.TextBox();
             this.txtmadocgia = new System.Windows.Forms.TextBox();
-            this.lbltienphat = new System.Windows.Forms.Label();
             this.lblhantra = new System.Windows.Forms.Label();
             this.lblngaytra = new System.Windows.Forms.Label();
             this.lblngaymuon = new System.Windows.Forms.Label();
@@ -47,6 +45,7 @@
             this.lablmadocgia = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lvMuonSach = new System.Windows.Forms.ListView();
+            this.btnTraSach = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -73,15 +72,14 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnTraSach);
             this.groupBox1.Controls.Add(this.btnxoa);
             this.groupBox1.Controls.Add(this.dtpngaytra);
             this.groupBox1.Controls.Add(this.dtphantra);
             this.groupBox1.Controls.Add(this.dtpngaymuon);
-            this.groupBox1.Controls.Add(this.txttienphat);
             this.groupBox1.Controls.Add(this.btnluu);
             this.groupBox1.Controls.Add(this.txtmasach);
             this.groupBox1.Controls.Add(this.txtmadocgia);
-            this.groupBox1.Controls.Add(this.lbltienphat);
             this.groupBox1.Controls.Add(this.lblhantra);
             this.groupBox1.Controls.Add(this.lblngaytra);
             this.groupBox1.Controls.Add(this.lblngaymuon);
@@ -97,12 +95,13 @@
             // btnxoa
             // 
             this.btnxoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnxoa.Location = new System.Drawing.Point(458, 190);
+            this.btnxoa.Location = new System.Drawing.Point(469, 190);
             this.btnxoa.Name = "btnxoa";
             this.btnxoa.Size = new System.Drawing.Size(75, 35);
             this.btnxoa.TabIndex = 15;
             this.btnxoa.Text = "Xóa";
             this.btnxoa.UseVisualStyleBackColor = true;
+            this.btnxoa.Click += new System.EventHandler(this.btnxoa_Click);
             // 
             // dtpngaytra
             // 
@@ -125,18 +124,10 @@
             this.dtpngaymuon.Size = new System.Drawing.Size(122, 22);
             this.dtpngaymuon.TabIndex = 12;
             // 
-            // txttienphat
-            // 
-            this.txttienphat.Location = new System.Drawing.Point(600, 39);
-            this.txttienphat.Name = "txttienphat";
-            this.txttienphat.ReadOnly = true;
-            this.txttienphat.Size = new System.Drawing.Size(122, 22);
-            this.txttienphat.TabIndex = 11;
-            // 
             // btnluu
             // 
             this.btnluu.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnluu.Location = new System.Drawing.Point(195, 190);
+            this.btnluu.Location = new System.Drawing.Point(290, 190);
             this.btnluu.Name = "btnluu";
             this.btnluu.Size = new System.Drawing.Size(75, 35);
             this.btnluu.TabIndex = 1;
@@ -157,15 +148,6 @@
             this.txtmadocgia.Name = "txtmadocgia";
             this.txtmadocgia.Size = new System.Drawing.Size(122, 22);
             this.txtmadocgia.TabIndex = 6;
-            // 
-            // lbltienphat
-            // 
-            this.lbltienphat.AutoSize = true;
-            this.lbltienphat.Location = new System.Drawing.Point(526, 45);
-            this.lbltienphat.Name = "lbltienphat";
-            this.lbltienphat.Size = new System.Drawing.Size(63, 16);
-            this.lbltienphat.TabIndex = 5;
-            this.lbltienphat.Text = "Tiền phạt";
             // 
             // lblhantra
             // 
@@ -231,6 +213,17 @@
             this.lvMuonSach.TabIndex = 0;
             this.lvMuonSach.UseCompatibleStateImageBehavior = false;
             // 
+            // btnTraSach
+            // 
+            this.btnTraSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnTraSach.Location = new System.Drawing.Point(103, 190);
+            this.btnTraSach.Name = "btnTraSach";
+            this.btnTraSach.Size = new System.Drawing.Size(101, 35);
+            this.btnTraSach.TabIndex = 16;
+            this.btnTraSach.Text = "Trả Sách";
+            this.btnTraSach.UseVisualStyleBackColor = true;
+            this.btnTraSach.Click += new System.EventHandler(this.btnTraSach_Click);
+            // 
             // frmQLyMuonTra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -260,11 +253,9 @@
         private System.Windows.Forms.DateTimePicker dtpngaytra;
         private System.Windows.Forms.DateTimePicker dtphantra;
         private System.Windows.Forms.DateTimePicker dtpngaymuon;
-        private System.Windows.Forms.TextBox txttienphat;
         private System.Windows.Forms.Button btnluu;
         private System.Windows.Forms.TextBox txtmasach;
         private System.Windows.Forms.TextBox txtmadocgia;
-        private System.Windows.Forms.Label lbltienphat;
         private System.Windows.Forms.Label lblhantra;
         private System.Windows.Forms.Label lblngaytra;
         private System.Windows.Forms.Label lblngaymuon;
@@ -272,5 +263,6 @@
         private System.Windows.Forms.Label lablmadocgia;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ListView lvMuonSach;
+        private System.Windows.Forms.Button btnTraSach;
     }
 }

@@ -36,6 +36,7 @@
             this.lblLayMNV = new System.Windows.Forms.Label();
             this.lblLayHoTenNV = new System.Windows.Forms.Label();
             this.lvDSSach = new System.Windows.Forms.ListView();
+            this.btnThemDocGia = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblTrangChu
@@ -50,7 +51,7 @@
             // 
             // btnTimKiem
             // 
-            this.btnTimKiem.Location = new System.Drawing.Point(355, 32);
+            this.btnTimKiem.Location = new System.Drawing.Point(443, 31);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(151, 44);
             this.btnTimKiem.TabIndex = 7;
@@ -60,7 +61,7 @@
             // 
             // btnQLMuonTra
             // 
-            this.btnQLMuonTra.Location = new System.Drawing.Point(581, 32);
+            this.btnQLMuonTra.Location = new System.Drawing.Point(617, 31);
             this.btnQLMuonTra.Name = "btnQLMuonTra";
             this.btnQLMuonTra.Size = new System.Drawing.Size(158, 44);
             this.btnQLMuonTra.TabIndex = 9;
@@ -113,11 +114,22 @@
             this.lvDSSach.TabIndex = 14;
             this.lvDSSach.UseCompatibleStateImageBehavior = false;
             // 
+            // btnThemDocGia
+            // 
+            this.btnThemDocGia.Location = new System.Drawing.Point(266, 31);
+            this.btnThemDocGia.Name = "btnThemDocGia";
+            this.btnThemDocGia.Size = new System.Drawing.Size(151, 44);
+            this.btnThemDocGia.TabIndex = 15;
+            this.btnThemDocGia.Text = "Thêm độc giả";
+            this.btnThemDocGia.UseVisualStyleBackColor = true;
+            this.btnThemDocGia.Click += new System.EventHandler(this.btnThemDocGia_Click);
+            // 
             // frmTrangChuNV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnThemDocGia);
             this.Controls.Add(this.lvDSSach);
             this.Controls.Add(this.lblLayHoTenNV);
             this.Controls.Add(this.lblLayMNV);
@@ -144,5 +156,6 @@
         private System.Windows.Forms.Label lblLayMNV;
         private System.Windows.Forms.Label lblLayHoTenNV;
         private System.Windows.Forms.ListView lvDSSach;
+        private System.Windows.Forms.Button btnThemDocGia;
     }
 }

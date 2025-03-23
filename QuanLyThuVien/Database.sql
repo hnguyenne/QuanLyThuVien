@@ -37,8 +37,7 @@ Create table muon(
 	ma_sach int references sach(ma_sach) on update cascade on delete cascade,
 	ngay_muon date not null default sysdatetime(),
 	ngay_het_han date not null,
-	ngay_tra date check (ngay_tra >= ngay_muon),
-	trang_thai varchar(12) check(trang_thai in (N'Đang mượn', N'Đã trả' , N'Đã hết hạn')) not null --có thể không cần
+	ngay_tra date,
 );
 
 Create table phat(

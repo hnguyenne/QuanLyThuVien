@@ -104,5 +104,12 @@ namespace QuanLyThuVien
             muontra.Show();
             this.Hide();
         }
+
+        private void btnThemDocGia_Click(object sender, EventArgs e)
+        {
+            frmThemDocGia frmThemDocGia = new frmThemDocGia();
+            frmThemDocGia.Show();
+            this.Hide();
+        }
     }
 }

@@ -10,7 +10,7 @@ create table sach(
 	nam int check (nam > 1000 and nam < 2025),
 	the_loai nvarchar(50) not null,
 	so_luong_tong int not null,
-	sl_con_lai int not null check (sl_con_lai <= so_luong_tong)
+	sl_con_lai int not null
 );
 
 Create table doc_gia(
@@ -46,19 +46,11 @@ ADD ma_nhan_vien INT;
 ALTER TABLE muon 
 ADD CONSTRAINT fk_muon_nhan_vien FOREIGN KEY (ma_nhan_vien) REFERENCES nhan_vien(ma_nhan_vien);
 
-Create table phat(
-	ma_phat_tien int identity(1,1) primary key,
-	ma_muon int references muon(ma_muon) on update cascade on delete cascade,
-	so_tien int not null,
-	da_tra int default 0,
-);
 
-insert into doc_gia values (1, N'Lê Quốc Đạt', '2003-08-29', '0123456789', N'Ninh Kiều, Cần Thơ','lqdat@gmail.com');
-insert into doc_gia values (2, N'Nguyễn Văn A', '2003-01-01', '0987654321', N'Ninh Kiều, Cần Thơ','nva@gmail.com');
-insert into doc_gia values (3, N'Lê Thị B', '2005-12-23', '0582958271', N'Ninh Kiều, Cần Thơ','ltb@gmail.com');
+insert into doc_gia values ( N'Lê Quốc Đạt', '2003-08-29', '0123456789', N'Ninh Kiều, Cần Thơ','lqdat@gmail.com');
+insert into doc_gia values ( N'Nguyễn Văn A', '2003-01-01', '0987654321', N'Ninh Kiều, Cần Thơ','nva@gmail.com');
+insert into doc_gia values ( N'Lê Thị B', '2005-12-23', '0582958271', N'Ninh Kiều, Cần Thơ','ltb@gmail.com');
 
-insert into sach values(1, N'Sách 1', N'Tác giả 1', 'NXB ABC', 2024, N'Sách giáo khoa', 10, 9);
+insert into sach values(N'Sách 1', N'Tác giả 1', 'NXB ABC', 2024, N'Sách giáo khoa', 10, 9);
 
-insert into nhan_vien values(1, N'Nhân viên 1', '0987987987', 'nv1@gmail.com', '12345678');
-
-select * from sach;
+insert into nhan_vien values(N'Nhân viên 1', '0987987987', 'nv1@gmail.com', '12345678');

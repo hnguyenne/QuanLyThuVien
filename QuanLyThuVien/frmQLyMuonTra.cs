@@ -113,7 +113,7 @@ namespace QuanLyThuVien
             lvMuonSach.Columns.Add("Hạn Trả", 120);
             lvMuonSach.Columns.Add("Ngày Trả", 120);
             clsDatabase.OpenConnection();
-            string query = @"select * from muon where ngay_tra is null";
+            string query = @"select * from muon order by ngay_muon";
 
             SqlCommand cmd = new SqlCommand(query, clsDatabase.con);
             SqlDataReader reader = cmd.ExecuteReader();

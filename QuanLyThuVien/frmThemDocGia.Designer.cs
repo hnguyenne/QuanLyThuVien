@@ -123,7 +123,7 @@
             this.btnXacNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXacNhan.Location = new System.Drawing.Point(96, 301);
             this.btnXacNhan.Name = "btnXacNhan";
-            this.btnXacNhan.Size = new System.Drawing.Size(99, 39);
+            this.btnXacNhan.Size = new System.Drawing.Size(131, 39);
             this.btnXacNhan.TabIndex = 9;
             this.btnXacNhan.Text = "Xác nhận";
             this.btnXacNhan.UseVisualStyleBackColor = true;
